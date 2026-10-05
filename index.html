@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DialToChat</title>
+<meta name="description" content="Message any phone number on WhatsApp without saving it as a contact — straight from your Android call log. Free 7-day trial.">
+<link rel="canonical" href="https://dialtochat.com/">
+<link rel="alternate" hreflang="en" href="https://dialtochat.com/">
+<link rel="alternate" hreflang="ru" href="https://dialtochat.com/ru/">
+<link rel="alternate" hreflang="es" href="https://dialtochat.com/es/">
+<link rel="alternate" hreflang="pt" href="https://dialtochat.com/pt/">
+<link rel="alternate" hreflang="hi" href="https://dialtochat.com/hi/">
+<link rel="alternate" hreflang="ar" href="https://dialtochat.com/ar/">
+<link rel="alternate" hreflang="id" href="https://dialtochat.com/id/">
+<link rel="alternate" hreflang="x-default" href="https://dialtochat.com/">
+<meta property="og:title" content="DialToChat — message a number on WhatsApp without saving it">
+<meta property="og:description" content="Open a WhatsApp chat with any number from your call log, without adding it to contacts. Android. Free trial.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dialtochat.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DialToChat","operatingSystem":"Android","applicationCategory":"CommunicationApplication","offers":{"@type":"Offer","price":"2.99","priceCurrency":"USD"},"description":"Message any phone number on WhatsApp without saving it as a contact, directly from your Android call log."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do I message a number on WhatsApp without saving it?","acceptedAnswer":{"@type":"Answer","text":"Install DialToChat on Android, pick the number from your call log, and tap it — a WhatsApp chat opens instantly without adding the number to your contacts."}},
+{"@type":"Question","name":"Is DialToChat on Google Play?","acceptedAnswer":{"@type":"Answer","text":"No. The app reads your call log to list recent numbers, a permission Google Play restricts, so DialToChat is distributed as a direct APK download from this site."}},
+{"@type":"Question","name":"Is it safe?","acceptedAnswer":{"@type":"Answer","text":"Yes. DialToChat reads your call log only on your phone to show the list. Nothing is uploaded; no data leaves your device."}}
+]}
+</script>
+<style>
+:root{
+  --bg:#f3f6f5; --surface:#ffffff; --ink:#0e1a17; --mut:#5a6b66; --line:#d7e0dc;
+  --accent:#0ea371; --accent-d:#0b8a60; --accent-soft:#d7f2e7; --dark:#0c1a16;
+  --dsp:"Plus Jakarta Sans",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0b1310;--surface:#121c18;--ink:#e8f1ed;--mut:#93a39d;--line:#223029;--accent:#2fcf96;--accent-d:#27b483;--accent-soft:#113026;--dark:#060d0b;color-scheme:dark;
+}}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--dsp);line-height:1.12;text-wrap:balance;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+a{color:var(--accent-d);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--dsp);font-weight:700;border-radius:12px;padding:13px 20px;cursor:pointer;border:0;font-size:15px}
+.btn-primary{background:var(--accent);color:#042018}
+.btn-primary:hover{background:var(--accent-d)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:12px;padding:12px 20px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--dsp);font-weight:800;font-size:19px;display:flex;align-items:center;gap:9px}
+.logo .d{width:26px;height:26px;border-radius:8px;background:var(--accent);display:grid;place-items:center;color:#042018}
+.spacer{flex:1}
+.lang{font-family:var(--body);font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:9px;padding:7px 10px}
+
+.hero{display:grid;gap:30px;align-items:center;padding-block:46px 30px}
+@media(min-width:820px){.hero{grid-template-columns:1.1fr .9fr}}
+.eyebrow{display:inline-block;font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:.04em;color:var(--accent-d);background:var(--accent-soft);padding:5px 12px;border-radius:999px}
+.hero h1{font-size:clamp(30px,6vw,50px);font-weight:800;letter-spacing:-.02em;margin-top:16px}
+.hero p.lead{color:var(--mut);font-size:clamp(16px,2.4vw,19px);margin-top:16px;max-width:52ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.micro{font-size:13px;color:var(--mut);margin-top:12px}
+
+/* phone mockup */
+.phone-wrap{display:flex;justify-content:center}
+.phone{width:270px;max-width:72vw;aspect-ratio:9/19;background:var(--dark);border-radius:34px;padding:12px;box-shadow:0 30px 70px rgba(10,40,30,.25);position:relative}
+.screen{background:var(--surface);border-radius:24px;height:100%;overflow:hidden;display:flex;flex-direction:column}
+.scr-top{background:var(--accent);color:#042018;padding:16px 14px 12px;font-family:var(--dsp);font-weight:800}
+.scr-top small{display:block;font-family:var(--body);font-weight:500;opacity:.8;font-size:11px}
+.row{display:flex;align-items:center;gap:10px;padding:11px 13px;border-bottom:1px solid var(--line)}
+.av{width:34px;height:34px;border-radius:50%;background:var(--accent-soft);color:var(--accent-d);display:grid;place-items:center;font-size:14px;flex:none}
+.row .n{font-weight:600;font-size:13px}
+.row .t{font-size:11px;color:var(--mut)}
+.row .go{margin-left:auto;width:28px;height:28px;border-radius:50%;background:var(--accent);display:grid;place-items:center;color:#042018}
+.row.hot{background:var(--accent-soft)}
+
+section{padding-block:40px}
+.sec-h{text-align:center;max-width:60ch;margin:0 auto 28px}
+.sec-h h2{font-size:clamp(23px,4vw,33px);font-weight:800}
+.sec-h p{color:var(--mut);margin-top:10px}
+.steps{display:grid;gap:16px;counter-reset:s}
+@media(min-width:720px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.step .num{counter-increment:s;width:34px;height:34px;border-radius:10px;background:var(--accent);color:#042018;font-family:var(--dsp);font-weight:800;display:grid;place-items:center}
+.step .num::before{content:counter(s)}
+.step h3{font-size:17px;margin:14px 0 6px}
+.step p{color:var(--mut);font-size:14.5px}
+.feats{display:grid;gap:14px}
+@media(min-width:640px){.feats{grid-template-columns:repeat(2,1fr)}}
+.feat{display:flex;gap:13px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}
+.feat .ic{width:40px;height:40px;flex:none;border-radius:11px;background:var(--accent-soft);color:var(--accent-d);display:grid;place-items:center;font-weight:800;font-family:var(--dsp)}
+.feat h3{font-size:16px;margin-bottom:3px}
+.feat p{color:var(--mut);font-size:14px}
+
+.price{max-width:460px;margin:0 auto;background:var(--surface);border:2px solid var(--accent);border-radius:20px;padding:30px;text-align:center;box-shadow:0 16px 44px rgba(10,60,40,.1)}
+.price .amt{font-family:var(--dsp);font-weight:800;font-size:44px;margin:8px 0}
+.price .amt small{font-size:17px;color:var(--mut);font-weight:600}
+.price ul{list-style:none;padding:0;margin:18px 0;text-align:left;display:grid;gap:9px}
+.price li{display:flex;gap:9px;font-size:15px}
+.price li::before{content:"✓";color:var(--accent-d);font-weight:800}
+
+.faq{max-width:760px;margin:0 auto;display:grid;gap:10px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px 18px}
+summary{cursor:pointer;font-family:var(--dsp);font-weight:700;padding:14px 0;list-style:none}
+summary::-webkit-details-marker{display:none}
+details[open] summary{border-bottom:1px solid var(--line)}
+details p{color:var(--mut);padding:12px 0;font-size:14.5px}
+footer{border-top:1px solid var(--line);padding:26px 0 46px;color:var(--mut);font-size:13px;text-align:center}
+.disc{max-width:60ch;margin:10px auto 0;font-size:12px;opacity:.85}
+</style>
+</head>
+<body>
+<header><nav class="nav">
+  <span class="logo"><span class="d">💬</span>DialToChat</span>
+  <span class="spacer"></span>
+  <select class="lang" id="lang" aria-label="Language">
+    <option value="en">English</option><option value="ru">Русский</option>
+    <option value="es">Español</option><option value="pt">Português</option>
+    <option value="hi">हिन्दी</option><option value="ar">العربية</option><option value="id">Indonesia</option>
+  </select>
+  <a class="btn btn-primary" href="#get" data-i="nav_get">Get the app</a>
+</nav></header>
+
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <span class="eyebrow" data-i="badge">Android • No contact saving</span>
+      <h1 data-i="h1">Message any number on WhatsApp — without saving it</h1>
+      <p class="lead" data-i="lead">Pick a number straight from your call log and open a WhatsApp chat in one tap. No new contact, no clutter.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#get" data-i="cta1">Download free trial</a>
+        <a class="btn btn-ghost" href="#how" data-i="cta2">See how it works</a>
+      </div>
+      <p class="micro" data-i="micro">7-day free trial · one-time ₸1490 (~$2.99) · Android 8+</p>
+    </div>
+    <div class="phone-wrap"><div class="phone"><div class="screen">
+      <div class="scr-top">DialToChat<small data-i="scr_sub">Recent calls</small></div>
+      <div class="row"><span class="av">+7</span><div><div class="n">+7 705 •• ••</div><div class="t" data-i="r1">Missed · 2 min</div></div><span class="go">➤</span></div>
+      <div class="row hot"><span class="av">+1</span><div><div class="n">+1 415 •• ••</div><div class="t" data-i="r2">Outgoing · 1 h</div></div><span class="go">➤</span></div>
+      <div class="row"><span class="av">+9</span><div><div class="n">+99 •• •• ••</div><div class="t" data-i="r3">Incoming · 3 h</div></div><span class="go">➤</span></div>
+      <div class="row"><span class="av">+4</span><div><div class="n">+44 20 •• ••</div><div class="t" data-i="r4">Missed · yest.</div></div><span class="go">➤</span></div>
+    </div></div></div>
+  </section>
+
+  <section id="how">
+    <div class="sec-h"><h2 data-i="how_h">How it works</h2><p data-i="how_p">Three taps from a call to a chat.</p></div>
+    <div class="steps">
+      <div class="step"><div class="num"></div><h3 data-i="s1h">Open your call log</h3><p data-i="s1p">DialToChat shows your recent numbers — no typing, no searching.</p></div>
+      <div class="step"><div class="num"></div><h3 data-i="s2h">Tap a number</h3><p data-i="s2p">Choose whoever you want to message from the list.</p></div>
+      <div class="step"><div class="num"></div><h3 data-i="s3h">Chat opens in WhatsApp</h3><p data-i="s3p">The conversation opens instantly — the number is never added to contacts.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-h"><h2 data-i="why_h">Why people use it</h2></div>
+    <div class="feats">
+      <div class="feat"><span class="ic">∅</span><div><h3 data-i="f1h">No saved contacts</h3><p data-i="f1p">Message one-time numbers without filling your phonebook with junk.</p></div></div>
+      <div class="feat"><span class="ic">⚡</span><div><h3 data-i="f2h">Straight from calls</h3><p data-i="f2p">Reply to a missed call on WhatsApp in seconds, no copy-paste.</p></div></div>
+      <div class="feat"><span class="ic">🔒</span><div><h3 data-i="f3h">Private</h3><p data-i="f3p">Your call log is read only on your phone. Nothing is uploaded.</p></div></div>
+      <div class="feat"><span class="ic">✶</span><div><h3 data-i="f4h">Any number</h3><p data-i="f4p">Type a number manually too — works with any country code.</p></div></div>
+    </div>
+  </section>
+
+  <section id="get">
+    <div class="sec-h"><h2 data-i="price_h">Simple price</h2><p data-i="price_p">Try everything free for 7 days. Keep it forever with one payment.</p></div>
+    <div class="price">
+      <div data-i="price_name" style="font-family:var(--dsp);font-weight:700">Full version</div>
+      <div class="amt">₸1490 <small>/ ~$2.99 <span data-i="once">once</span></small></div>
+      <ul>
+        <li data-i="pl1">7-day free trial, full features</li>
+        <li data-i="pl2">One-time payment, no subscription</li>
+        <li data-i="pl3">Lifetime updates</li>
+        <li data-i="pl4">Works offline (except opening WhatsApp)</li>
+      </ul>
+      <a class="btn btn-primary" style="width:100%;justify-content:center" href="#" data-i="buy">Download & start trial</a>
+      <p class="micro" data-i="buy_micro">APK download · enable “install from unknown sources” once.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-h"><h2 data-i="faq_h">Questions</h2></div>
+    <div class="faq">
+      <details open><summary data-i="q1">How do I message a number without saving it?</summary><p data-i="a1">Install DialToChat, pick the number from your call log, tap it — a WhatsApp chat opens without adding a contact.</p></details>
+      <details><summary data-i="q2">Why isn’t it on Google Play?</summary><p data-i="a2">The app reads your call log to list recent numbers — a permission Google Play restricts. So it’s a direct APK download from this site.</p></details>
+      <details><summary data-i="q3">Is it safe?</summary><p data-i="a3">Yes. Your call log is read only on your phone to build the list. Nothing is uploaded; no data leaves your device.</p></details>
+      <details><summary data-i="q4">Which phones?</summary><p data-i="a4">Android 8 and newer. WhatsApp must be installed.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>© <span id="yr"></span> DialToChat</div>
+  <p class="disc" data-i="disc">Not affiliated with, endorsed by, or connected to WhatsApp or Meta. “WhatsApp” is a trademark of its owner, used here only to describe compatibility.</p>
+</footer>
+
+<script>
+const I={
+ en:{nav_get:"Get the app",badge:"Android • No contact saving",h1:"Message any number on WhatsApp — without saving it",lead:"Pick a number straight from your call log and open a WhatsApp chat in one tap. No new contact, no clutter.",cta1:"Download free trial",cta2:"See how it works",micro:"7-day free trial · one-time ₸1490 (~$2.99) · Android 8+",scr_sub:"Recent calls",r1:"Missed · 2 min",r2:"Outgoing · 1 h",r3:"Incoming · 3 h",r4:"Missed · yest.",how_h:"How it works",how_p:"Three taps from a call to a chat.",s1h:"Open your call log",s1p:"DialToChat shows your recent numbers — no typing, no searching.",s2h:"Tap a number",s2p:"Choose whoever you want to message from the list.",s3h:"Chat opens in WhatsApp",s3p:"The conversation opens instantly — the number is never added to contacts.",why_h:"Why people use it",f1h:"No saved contacts",f1p:"Message one-time numbers without filling your phonebook with junk.",f2h:"Straight from calls",f2p:"Reply to a missed call on WhatsApp in seconds, no copy-paste.",f3h:"Private",f3p:"Your call log is read only on your phone. Nothing is uploaded.",f4h:"Any number",f4p:"Type a number manually too — works with any country code.",price_h:"Simple price",price_p:"Try everything free for 7 days. Keep it forever with one payment.",price_name:"Full version",once:"once",pl1:"7-day free trial, full features",pl2:"One-time payment, no subscription",pl3:"Lifetime updates",pl4:"Works offline (except opening WhatsApp)",buy:"Download & start trial",buy_micro:"APK download · enable “install from unknown sources” once.",faq_h:"Questions",q1:"How do I message a number without saving it?",a1:"Install DialToChat, pick the number from your call log, tap it — a WhatsApp chat opens without adding a contact.",q2:"Why isn’t it on Google Play?",a2:"The app reads your call log to list recent numbers — a permission Google Play restricts. So it’s a direct APK download from this site.",q3:"Is it safe?",a3:"Yes. Your call log is read only on your phone to build the list. Nothing is uploaded; no data leaves your device.",q4:"Which phones?",a4:"Android 8 and newer. WhatsApp must be installed.",disc:"Not affiliated with, endorsed by, or connected to WhatsApp or Meta. “WhatsApp” is a trademark of its owner, used here only to describe compatibility."},
+ ru:{nav_get:"Скачать",badge:"Android • без сохранения контактов",h1:"Пишите в WhatsApp на любой номер — не сохраняя его",lead:"Выберите номер прямо из журнала звонков и откройте чат в WhatsApp одним касанием. Без нового контакта и мусора в телефонной книге.",cta1:"Скачать пробную версию",cta2:"Как это работает",micro:"7 дней бесплатно · разово 1490 ₸ (~$2.99) · Android 8+",scr_sub:"Недавние звонки",r1:"Пропущенный · 2 мин",r2:"Исходящий · 1 ч",r3:"Входящий · 3 ч",r4:"Пропущенный · вчера",how_h:"Как это работает",how_p:"Три касания — от звонка к чату.",s1h:"Открой журнал звонков",s1p:"DialToChat покажет недавние номера — без ввода и поиска.",s2h:"Коснись номера",s2p:"Выбери, кому написать, прямо из списка.",s3h:"Чат откроется в WhatsApp",s3p:"Разговор открывается сразу — номер не добавляется в контакты.",why_h:"Зачем это нужно",f1h:"Без лишних контактов",f1p:"Пиши на разовые номера, не засоряя телефонную книгу.",f2h:"Сразу из звонков",f2p:"Ответь на пропущенный в WhatsApp за секунды, без копирования.",f3h:"Приватно",f3p:"Журнал звонков читается только на твоём телефоне. Ничего не загружается.",f4h:"Любой номер",f4p:"Можно ввести номер и вручную — работает с любым кодом страны.",price_h:"Простая цена",price_p:"7 дней всё бесплатно. Оставь навсегда одной оплатой.",price_name:"Полная версия",once:"разово",pl1:"7 дней бесплатно, все функции",pl2:"Разовая оплата, без подписки",pl3:"Обновления навсегда",pl4:"Работает офлайн (кроме открытия WhatsApp)",buy:"Скачать и начать пробный период",buy_micro:"Загрузка APK · один раз разреши «установку из неизвестных источников».",faq_h:"Вопросы",q1:"Как написать на номер, не сохраняя его?",a1:"Установи DialToChat, выбери номер из журнала звонков, коснись — чат WhatsApp откроется без добавления контакта.",q2:"Почему нет в Google Play?",a2:"Приложение читает журнал звонков, чтобы показать номера — а это ограниченное в Google Play разрешение. Поэтому оно скачивается APK-файлом с этого сайта.",q3:"Это безопасно?",a3:"Да. Журнал звонков читается только на твоём телефоне, чтобы составить список. Ничего не загружается, данные не покидают устройство.",q4:"Какие телефоны?",a4:"Android 8 и новее. WhatsApp должен быть установлен.",disc:"Не связано с WhatsApp и Meta и ими не одобрено. «WhatsApp» — товарный знак владельца, упомянут только для описания совместимости."}
+};
+// заглушки для остальных языков (пока показываем английский; реальные переводы добавлю)
+["es","pt","hi","ar","id"].forEach(k=>I[k]=I[k]||I.en);
+function setLang(l){
+  const d=I[l]||I.en;
+  document.querySelectorAll("[data-i]").forEach(e=>{const k=e.getAttribute("data-i"); if(d[k]!=null) e.textContent=d[k];});
+  document.documentElement.lang=l;
+  document.documentElement.dir = (l==="ar")?"rtl":"ltr";
+  try{localStorage.setItem("dtc-lang",l)}catch(e){}
+}
+const sel=document.getElementById("lang");
+let init="en"; try{init=localStorage.getItem("dtc-lang")||(navigator.language||"en").slice(0,2)}catch(e){}
+if(!I[init])init="en"; sel.value=init; setLang(init);
+sel.onchange=()=>setLang(sel.value);
+document.getElementById("yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
